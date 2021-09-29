@@ -3,6 +3,10 @@
 # 部署方法
 建议在云服务器上部署，以保证长期24小时运行。
 # 依赖
+
+```
+pip install -r requirements.txt
+```
 # 配置
 1. 在config.yml中配置：
 ```
