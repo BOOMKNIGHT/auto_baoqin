@@ -5,14 +5,27 @@
 # 依赖
 # 配置
 1. 在config.yml中配置：
-![image](https://user-images.githubusercontent.com/54172108/135284410-a709b35e-1d03-4fa9-890f-3dc88cdfef56.png)
+```
+uin:  # QQ账号
+password: '' # 密码为空时使用扫码登录
+```
+
 2. 在rob2>src>test.py中配置
-![image](https://user-images.githubusercontent.com/54172108/135284539-af1df7da-f178-401e-9cb2-0f5c9feb70df.png)
+
+```
+async def dy_sched():
+    bot = nonebot.get_bots()['你的QQ号']
+    print(bot)
+    return await bot.call_api('send_group_msg', **{
+        'message': 'XXX校内在寝',
+        'group_id': '群号'
+    })
+```
 # 运行
-'''
+```python
 cd rob2
 nohup python bot.py &
 cd ..
 nohup ./go-cqhttp &
-'''
+```
 
